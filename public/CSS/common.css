@@ -1,0 +1,52 @@
+ body {
+	 margin: 0;
+	 width: 100%;
+	 color: #242424;
+	 font-family: 'Open Sans', sans-serif;
+	 font-size: 0.92em;
+	 overflow-x: hidden;
+}
+ a {
+	 text-decoration: none;
+	 color: inherit;
+}
+ * {
+	 outline: none;
+	 box-sizing: border-box;
+}
+ p {
+	 letter-spacing: 0.5px;
+	 text-align: justify;
+	 line-height: 1.8;
+	/*@include below-desktop{
+		 text-align: left;
+	}
+	*/
+}
+ div#page_container {
+	 display: block;
+	 min-height: 100vh;
+}
+ div#view_container {
+	 display: block;
+	 position: relative;
+	 height: auto;
+}
+ #particles-js {
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 width: 100%;
+	 height: 100%;
+}
+ section.first {
+	 display: block;
+	 position: relative;
+	 width: 100%;
+	 min-height: calc(100vh - 0.0*72px);
+	 padding-top: 72px;
+}
+ span.node-green {
+	 color: #8cc63f;
+}
+ 

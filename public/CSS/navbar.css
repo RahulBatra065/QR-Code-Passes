@@ -1,0 +1,244 @@
+ .navbar.light {
+	 color: #242424;
+	 background-color: #fff;
+}
+ .navbar.light .cross {
+	 color: #242424;
+}
+ .navbar.light .cross.show {
+	 color: #242424;
+}
+ @media only screen and (max-width: 1025px) {
+	 .navbar.light .icons {
+		 background-color: #fff;
+	}
+	 .navbar.light .icons.show {
+		 background-color: #fff;
+	}
+}
+ @media only screen and (max-width: 1025px) {
+	 .navbar.light .links {
+		 background-color: #fff;
+	}
+	 .navbar.light .links.show {
+		 background-color: #fff;
+	}
+	 .navbar.light .links.show .nav-item {
+		 color: #242424;
+		 transition: all 0.3s;
+	}
+	 .navbar.light .links.show .nav-item:hover {
+		 color: #303b82;
+		 transition: all 0.3s;
+	}
+}
+ .navbar.light .links .nav-item {
+	 color: #242424;
+	 transition: all 0.3s;
+}
+ .navbar.light .links .nav-item:hover {
+	 color: #303b82;
+	 transition: all 0.3s;
+}
+
+.navbar.transparent-light {
+	color: #fff;
+	background-color: transparent;
+}
+.navbar.transparent-light .cross {
+	color: #fff;
+}
+.navbar.transparent-light .cross.show {
+	color: #242424;
+}
+@media only screen and (max-width: 1025px) {
+	.navbar.transparent-light .icons {
+		background-color: transparent;
+   }
+	.navbar.transparent-light .icons.show {
+		background-color: #fff;
+   }
+}
+@media only screen and (max-width: 1025px) {
+	.navbar.transparent-light .links {
+		background-color: transparent;
+   }
+	.navbar.transparent-light .links.show {
+		background-color: #fff;
+   }
+	.navbar.transparent-light .links.show .nav-item {
+		color: #242424;
+		transition: all 0.3s;
+   }
+	.navbar.transparent-light .links.show .nav-item:hover {
+		color: #303b82;
+		transition: all 0.3s;
+   }
+}
+.navbar.transparent-light .links .nav-item {
+	color: #fff;
+	transition: all 0.3s;
+}
+.navbar.transparent-light .links .nav-item:hover {
+	color: #fff;
+	transition: all 0.3s;
+}
+
+ .navbar {
+	 display: flex;
+	 position: fixed;
+	 top: 0;
+	 width: 100%;
+	 height: 72px;
+	 justify-content: flex-start;
+	 align-items: center;
+	 z-index: 3;
+	 transition: top 0.5s;
+}
+ @media only screen and (max-width: 1025px) {
+	 .navbar {
+		 height: auto;
+		 flex-direction: column;
+		 overflow-x: hidden;
+		 overflow-y: auto;
+		 background-color: transparent;
+		 overflow: hidden;
+		 font-family: Montserrat, sans-serif;
+	}
+}
+ .navbar .cross {
+	 display: none;
+	 z-index: 4;
+}
+ @media only screen and (max-width: 1025px) {
+	 .navbar .cross {
+		 display: block;
+		 position: absolute;
+		 top: calc(0.5*72px - 0.5*30px);
+		 left: 5%;
+		 width: 30px;
+		 height: 30px;
+	}
+}
+ .navbar .cross .one {
+	 display: block;
+	 position: absolute;
+	 top: 6px;
+	 left: 50%;
+	 width: 20px;
+	 height: 2px;
+	 background-color: currentColor;
+	 transform: translate(-50%, 0);
+	 transition: all 0.2s;
+}
+ .cross.show > .one {
+	transform: rotate(-45deg) translate(-16px, -5px);
+}
+ .navbar .cross .two {
+	 display: block;
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 width: 20px;
+	 height: 2px;
+	 background-color: currentColor;
+	 transform: translate(-50%, -50%);
+	 transition: all 0.2s;
+}
+ .cross.show > .two {
+	opacity: 0;
+}
+ .navbar .cross .three {
+	 display: block;
+	 position: absolute;
+	 bottom: 6px;
+	 left: 50%;
+	 width: 20px;
+	 height: 2px;
+	 background-color: currentColor;
+	 transform: translate(-50%, -50%);
+	 transition: all 0.2s;
+}
+ .cross.show > .three {
+	transform: rotate(45deg) translate(-16px, 5px);
+}
+ .navbar .icons {
+	 display: flex;
+	 height: 72px;
+	 width: auto;
+	 margin-left: 8%;
+	 justify-content: flex-start;
+	 align-items: center;
+}
+ @media only screen and (max-width: 1025px) {
+	 .navbar .icons {
+		 width: 100%;
+		 margin: 0;
+		 padding: 4px 0 0 0;
+		 justify-content: center;
+	}
+}
+ .navbar .icons a {
+	 height: 45%;
+}
+ .navbar .icons .logo {
+	 height: 100%;
+	 width: auto;
+}
+ @media only screen and (max-width: 1025px) {
+	 .navbar .icons .logo {
+		 padding: 0 0 0 6.25%;
+	}
+}
+ .navbar .links {
+	 display: flex;
+	 width: 100%;
+	 height: 100%;
+	 margin-left: auto;
+	 margin-right: 8%;
+	 justify-content: flex-end;
+	 align-items: center;
+}
+ @media only screen and (max-width: 1025px) {
+	 .navbar .links {
+		 position: relative;
+		 width: 100%;
+		 height: 0;
+		 margin: 0;
+		 padding: 0;
+		 flex-direction: column;
+		 justify-content: flex-start;
+		 align-items: center;
+		 transition: all 0.2s;
+	}
+	 .navbar .links.show {
+		 height: 100vh;
+		 padding: 20px 0;
+	}
+}
+ .navbar .links .nav-item {
+	 position: relative;
+	 margin: 0 20px;
+	 font-weight: normal;
+}
+ @media only screen and (max-width: 1025px) {
+	 .navbar .links .nav-item {
+		 font-size: 1rem;
+		 margin: 12px 0;
+	}
+}
+ .navbar .links .nav-item::after {
+	 content: '';
+	 display: block;
+	 position: absolute;
+	 transform: translate(-50%, 0);
+     top: 100%;
+     left: 50%;
+	 width: 0;
+	 height: 2px;
+	 background-color: currentColor;
+	 transition: all 0.3s;
+}
+ .navbar .links .nav-item:hover::after {
+	 width: 100%;
+}

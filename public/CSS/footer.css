@@ -1,0 +1,208 @@
+ footer.light {
+	 background-color: #fff;
+	 color: #242424;
+}
+ footer.light .contact-details p.contact a {
+	 color: #7cae39;
+}
+ footer.light .contact-details p.contact a:hover {
+	 color: #fff;
+	 background-color: #303b82;
+}
+ footer.light .links .link .name {
+	 color: #fff;
+	 background-color: #242424;
+}
+ footer.light .links .link .name::after {
+	 border-top-color: #242424;
+}
+ footer {
+	 display: flex;
+	 position: relative;
+	 width: 100%;
+	 min-height: 350px;
+	 padding: 40px 60px;
+	 font-family: Montserrat, sans-serif;
+	 font-size: 1em;
+	 flex-direction: column;
+	 justify-content: center;
+	 align-items: center;
+	 color: #fff;
+	 background-color: #22114f;
+}
+ @media only screen and (max-width: 600px) {
+	 footer {
+		 padding: 40px 0;
+	}
+}
+ footer .heart {
+	 position: relative;
+	 top: 0.2rem;
+	 height: 1.1rem;
+	 margin: 0 3px;
+}
+ footer .content {
+	 display: grid;
+	 width: 100%;
+	 grid-template-columns: 50% auto;
+	 grid-template-rows: auto auto;
+	 grid-template-areas: "text map" "links map";
+}
+ @media only screen and (max-width: 1025px) {
+	 footer .content {
+		 grid-template-columns: 50% auto;
+		 grid-template-rows: auto auto;
+		 grid-template-areas: "map map" "text links";
+	}
+}
+ @media only screen and (max-width: 600px) {
+	 footer .content {
+		 grid-template-columns: 100%;
+		 grid-template-rows: auto auto auto;
+		 grid-template-areas: "text" "map" "links";
+	}
+}
+ .content p.intro {
+	 grid-area: text;
+	 text-align: right;
+	 margin: 20px 10px 0 0;
+	 font-size: 0.9em;
+}
+ @media only screen and (max-width: 1025px) {
+	 .content p.intro {
+		 margin: 20px 10px 20px 0;
+	}
+}
+ @media only screen and (max-width: 600px) {
+	 .content p.intro {
+		 text-align: center;
+		 margin: 20px 0;
+	}
+}
+ .content .contact-details {
+	 grid-area: links;
+	 display: flex;
+	 margin: 0 10px 20px 0;
+	 flex-direction: column;
+	 justify-content: flex-start;
+	 align-items: flex-end;
+}
+ @media only screen and (max-width: 1025px) {
+	 .content .contact-details {
+		 align-items: flex-start;
+		 margin: 20px 0 0 10px;
+	}
+}
+ @media only screen and (max-width: 600px) {
+	 .content .contact-details {
+		 justify-content: center;
+		 align-items: center;
+		 margin: 20px 0;
+	}
+}
+ .content .contact-details p.contact {
+	 margin: 0 0 10px 0;
+}
+ .content .contact-details p.contact a {
+	 padding: 5px 8px;
+	 font-size: 0.9em;
+	 color: #7cae39;
+	 border-radius: 100px;
+	 transition: all 0.2s;
+}
+ .content .contact-details p.contact a:hover {
+	 background-color: #fff;
+}
+ .content .contact-details .links {
+	 justify-content: flex-end;
+}
+ @media only screen and (max-width: 1025px) {
+	 .content .contact-details .links {
+		 justify-content: flex-start;
+	}
+}
+ @media only screen and (max-width: 600px) {
+	 .content .contact-details .links {
+		 justify-content: center;
+	}
+}
+ .content #gmap {
+	 grid-area: map;
+	 display: block;
+	 position: relative;
+	 top: 50%;
+	 transform: translate(0, -50%);
+	 width: 84%;
+	 max-width: 375px;
+	 height: 220px;
+	 margin: 0 10px;
+	 border-radius: 5px;
+	 box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+	 overflow: hidden;
+}
+ @media only screen and (max-width: 1025px) {
+	 .content #gmap {
+		 left: 50%;
+		 transform: translate(-50%, -50%);
+		 margin: 0;
+	}
+}
+ .links {
+	 display: flex;
+	 width: 100%;
+	 height: 30px;
+	 align-items: center;
+	 padding: 0px 5px;
+}
+ .links .link {
+	 display: flex;
+	 position: relative;
+	 width: 30px;
+	 height: 30px;
+	 margin: 0;
+	 justify-content: flex-start;
+	 align-items: center;
+}
+ .links .link + .link {
+	 margin-left: 10px;
+}
+ .links .link .name {
+	 display: block;
+	 position: absolute;
+	 top: -2.6rem;
+	 left: 50%;
+	 transform: translate(-50%, 10px);
+	 padding: 0 10px;
+	 font-size: 0.8rem;
+	 line-height: 1.8;
+	 color: #242424;
+	 background-color: #fff;
+	 border-radius: 5px;
+	 transition: all 0.2s;
+	 box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+	 pointer-events: none;
+	 opacity: 0;
+}
+ .links .link .name::after {
+	 content: '';
+	 display: block;
+	 position: absolute;
+	 top: 100%;
+	 left: 50%;
+	 transform: translate(-50%, 0);
+	 width: 0;
+	 height: 0;
+	 border: 6px solid transparent;
+	 border-top-color: #fff;
+}
+ .links .link:hover .name {
+	 transform: translate(-50%, 0);
+	 opacity: 1;
+}
+ .links .link .icon {
+	 display: block;
+	 width: 100%;
+	 height: 100%;
+	 border-radius: 100%;
+}
+ 
