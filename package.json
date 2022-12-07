@@ -10,9 +10,9 @@
   "author": "Rahul Batra 2019",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.19.0",
+    "body-parser": "^1.20.1",
     "ejs": "^2.7.1",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "math": "0.0.3",
     "mongodb": "^2.2.36",
     "passport": "^0.4.0",
